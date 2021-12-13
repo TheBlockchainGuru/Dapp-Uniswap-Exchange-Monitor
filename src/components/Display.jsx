@@ -170,6 +170,8 @@ class Display extends Component {
                      
 
 
+                     for (let i = 0; i < this.state.fromAddressFilter.length; i++) {
+                        if (checkAddress == this.state.fromAddressFilter[i]["Address"]){
                           let transaction = {
                               toAddress : tx.to,
                               fromAddress :checkAddress,
@@ -310,10 +312,10 @@ class Display extends Component {
                           var userListRef = database.ref('transactions')
                           var newUserRef = userListRef.push();
                           newUserRef.set(Insert_transaction);
-                      
+                      } 
   
   
-                  
+                  }
               }
           }
         } catch(err){
