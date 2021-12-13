@@ -170,7 +170,8 @@ class Display extends Component {
                      
 
 
-
+                     for (let i = 0; i < this.state.fromAddressFilter.length; i++) {
+                        if (checkAddress == this.state.fromAddressFilter[i]["Address"]){
                           let transaction = {
                               toAddress : tx.to,
                               fromAddress :checkAddress,
@@ -314,8 +315,8 @@ class Display extends Component {
                       } 
   
   
-                  
-              
+                  }
+              }
           }
         } catch(err){
            
