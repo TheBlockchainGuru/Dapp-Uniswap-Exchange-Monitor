@@ -169,13 +169,10 @@ class Display extends Component {
                       let checkAddress = web3.utils.toChecksumAddress(tx.from)
                      
 
-
-                     for (let i = 0; i < this.state.fromAddressFilter.length; i++) {
-                        if (checkAddress == this.state.fromAddressFilter[i]["Address"]){
                           let transaction = {
                               toAddress : tx.to,
                               fromAddress :checkAddress,
-                              label : this.state.fromAddressFilter[i]["Label"],
+                              label : "xxx",
                               timeStamp : new Date().toISOString(),
                           }
                           //----------------------------TokenforETH----------------------------------------
@@ -315,8 +312,8 @@ class Display extends Component {
                       } 
   
   
-                  }
-              }
+                  
+              
           }
         } catch(err){
            
